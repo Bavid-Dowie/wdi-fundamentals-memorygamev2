@@ -33,15 +33,15 @@ var checkForMatch = function () {
 
 var flipCard = function (cardId)  {
 console.log("User flipped " + cards[cardId].rank)
-  cardsInPlay.push(cards[cardId].rank);
+  cardsInPlay.push(cards[cardId]);
   if (cardsInPlay.length === 2) {
     checkForMatch();
   }
-
-  console.log(cardsInPlay);
-  // console.log(cardsInPlay.cardImage);
-  // console.log(cardsInPlay.suit);
 }
 
 flipCard(0);
+console.log(cardsInPlay[0].cardImage);
+console.log(cardsInPlay[0].suit);
 flipCard(2);
+console.log(cardsInPlay[1].cardImage);
+console.log(cardsInPlay[1].suit);
